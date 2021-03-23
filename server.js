@@ -1,5 +1,6 @@
 // Load dependencies
 const express = require("express")
+const indexRouter = require('./routes/index');
 
 // Create the express app
 const app = express()
@@ -8,14 +9,15 @@ const app = express()
 app.set("view engine", "ejs")
 
 // Mount middleware
+app.use('/', indexRouter);
 
 // Mount routes
 app.get("/", function (req, res) {
-	res.render("home")
+	res.render("index")
 })
 
 // Tell the app to listen on a port
-const port = 4000
+const port = 3300
 app.listen(port, function () {
 	console.log(`Express is listening on port ${port}`)
 })
