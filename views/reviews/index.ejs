@@ -23,7 +23,7 @@
           </tr>
         </thead>
         <tbody>
-          <% reviews.forEach(function(r) { %>
+          <% reviews.forEach(function(r, idx) { %>
             <tr>
               <td><%= r.title %></td>
               <td><%= r.developer %></td>
@@ -31,8 +31,12 @@
               <td><%= r.genre %></td>
               <td><%= r.rating %></td>
               <td><%= r.review %></td>
-              
-              <td><a href="/reviews/<%= r._id %>">DETAILS</a></td>
+              <td>
+                <form action="/reviews/<%= r._id %>?_method=DELETE"
+                    class="delete-form" method="POST">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
             </tr>
             <% }); %>
           </tbody>

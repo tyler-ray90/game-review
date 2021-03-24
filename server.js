@@ -2,6 +2,7 @@
 const express = require("express")
 const indexRouter = require('./routes/index');
 const reviewsRouter = require('./routes/reviews')
+const methodOverride = require('method-override');
 require('./config/database');
 
 
@@ -13,6 +14,7 @@ app.set("view engine", "ejs")
 
 // Mount middleware
 app.use(express.urlencoded({extended: false}));
+app.use(methodOverride('_method'));
 
 // Mount routes
 app.use('/', indexRouter);

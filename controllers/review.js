@@ -23,8 +23,16 @@ function create(req, res) {
 
 };
 
+function deleteReview(req, res) {
+    Review.findByIdAndDelete({_id:req.params.id}).exec(function(err, entry){
+        res.redirect('/reviews');
+    })
+}
+
+
 module.exports = {
     index,
     new: newReview,
     create,
+    delete: deleteReview,
 };
