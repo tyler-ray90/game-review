@@ -10,7 +10,21 @@ function index(req, res) {
     });
 }
 
+function newReview(req, res) {
+    res.render('reviews/new')
+};
+
+
+function create(req, res) {
+    Review.create(req.body, function(err, review) {
+        if (err) console.log(err);
+        res.redirect('/reviews');
+    });
+
+};
 
 module.exports = {
     index,
+    new: newReview,
+    create,
 };

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The form will go here</h1>
+    <a href="/">Home Page</a>
+    
+    <form id="new-form" action="/reviews" method="POST">
+        <label>Game Title:</label>
+        <input type="text" name="title">
+        <label>Developer:</label>
+        <input type="text" name="developer">
+        <label>Release Year:</label>
+        <input type="text" name="releaseYear">
+        <label>Genre:</label>
+        <input type="text" name="genre">
+        <label>Rating:</label>
+        <select name="rating">
+          <option value="1">1</option>
+          <option value="1.5">1.5</option>
+          <option value="2">2.0</option>
+          <option value="2.5">2.5</option>
+          <option value="3">3</option>
+          <option value="3.5">3.5</option>
+          <option value="4">4</option>
+          <option value="4.5">4.5</option>
+          <option value="5">5</option>
+          <option value="5.5">5.5</option>
+          <option value="6">6</option>
+          <option value="6.5">6.5</option>
+          <option value="7">7</option>
+          <option value="7.5">7.5</option>
+          <option value="8">8</option>
+          <option value="8.5">8.5</option>
+          <option value="9">9</option>
+          <option value="9.5">9.5</option>
+          <option value="10">10</option>
+        </select>
+        <label>Written Review:</label>
+        <input type="text" name="review">
+        <input type="submit" value="Add Review">
+      </form>
+</body>
+</html>

@@ -7,6 +7,8 @@ mongoose.connect('mongodb+srv://admin:mushookie@cluster0.yigvn.mongodb.net/game-
     useFindAndModify: false
 });
 
+
+
 // shortcut to mongoose.connection object
 const db = mongoose.connection;
 

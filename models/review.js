@@ -3,10 +3,26 @@ const Schema = mongoose.Schema;
 
 const reviewSchema = new Schema(
     {
-        game_title: {
+        title: {
             type: String,
         },
+        genre: {
+            type: String,
+        },
+        releaseYear: {
+            type: Number,
+        },
+        rating: {
+            type: Number,
+        },
+        developer: {
+            type: String,
+        }, 
+        review: {
+            type: String,
+        }
+
 
 });
 
-module.exports = mongoose.model("Game", reviewSchema);
+module.exports = mongoose.model("Review", reviewSchema);
