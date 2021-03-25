@@ -11,8 +11,11 @@ function index(req, res) {
 }
 
 function show(req, res) {
-    res.render('reviews/show', {
-        reviewNum: parseInt(req.params.id) + 1
+    Review.findById(req.params.id, function(err, review){
+        res.render('reviews/show', {
+        review,
+    });
+        
     });
 }
 

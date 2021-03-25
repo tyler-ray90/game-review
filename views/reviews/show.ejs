@@ -8,5 +8,10 @@
 </head>
 <body>
     <h1>This is the show page</h1>
-    <a href="/reviews/<%= reviewNum -1  %>/edit">Edit This review</a>
+    <div>
+        <%= review.title %>
+    </div>
+
+    <a href="/reviews/<%= review._id  %>/edit">Edit This review</a>
+
 </html>

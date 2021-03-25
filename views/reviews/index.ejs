@@ -25,7 +25,7 @@
         <tbody>
           <% reviews.forEach(function(r, idx) { %>
             <tr>
-              <td><a href="/reviews/<%= idx %>show"><%= r.title %></a></td>
+              <td><a href="/reviews/<%= r._id %>"><%= r.title %></a></td>
               <td><%= r.developer %></td>
               <td><%= r.releaseYear %></td>
               <td><%= r.genre %></td>
