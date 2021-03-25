@@ -10,9 +10,16 @@ function index(req, res) {
     });
 }
 
+function show(req, res) {
+    res.render('reviews/show', {
+        reviewNum: parseInt(req.params.id) + 1
+    });
+}
+
 function newReview(req, res) {
     res.render('reviews/new')
 };
+
 
 
 function create(req, res) {
@@ -29,16 +36,20 @@ function deleteReview(req, res) {
     })
 }
 
+// function edit(req, res) {
+//     // const review = Review.getOne(req.params.id);
+//     res.render('reviews/edit', {review, reviewId: req.params.id,});
+// }
+
 function edit(req, res) {
-    const review = Review.getOne(req.params.id);
-    res.render('reviews/edit', {review, reviewId: req.params.id,});
+    res.render('reviews/edit');
 }
 
 function update(req, res) {
     // set the done property
     req.body.done = false;
     // ask the data file to replace the existing todo object with the updated one
-    Review.updateOne(req.params.id, req.body);
+    // Review.updateOne(req.params.id, req.body);
     // respond with res.redirect
     res.redirect(`/reviews/${req.params.id}`);
 }
@@ -48,6 +59,7 @@ module.exports = {
     index,
     new: newReview,
     create,
+    show,
     delete: deleteReview,
     edit,
     update,
