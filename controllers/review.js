@@ -29,10 +29,26 @@ function deleteReview(req, res) {
     })
 }
 
+function edit(req, res) {
+    const review = Review.getOne(req.params.id);
+    res.render('reviews/edit', {review, reviewId: req.params.id,});
+}
+
+function update(req, res) {
+    // set the done property
+    req.body.done = false;
+    // ask the data file to replace the existing todo object with the updated one
+    Review.updateOne(req.params.id, req.body);
+    // respond with res.redirect
+    res.redirect(`/reviews/${req.params.id}`);
+}
+
 
 module.exports = {
     index,
     new: newReview,
     create,
     delete: deleteReview,
+    edit,
+    update,
 };
