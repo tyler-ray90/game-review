@@ -13,7 +13,7 @@ const app = express()
 app.set("view engine", "ejs")
 
 // Mount middleware
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 
 // Mount routes

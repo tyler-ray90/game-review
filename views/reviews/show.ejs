@@ -10,6 +10,11 @@
     <h1>This is the show page</h1>
     <div>
         <%= review.title %>
+        <%= review.developer %>
+        <%= review.genre %>
+        <%= review.releaseYear %>
+        <%= review.rating %>
+        <%= review.review %>
     </div>
 
     <a href="/reviews/<%= review._id  %>/edit">Edit This review</a>

@@ -44,17 +44,26 @@ function deleteReview(req, res) {
 //     res.render('reviews/edit', {review, reviewId: req.params.id,});
 // }
 
+
 function edit(req, res) {
-    res.render('reviews/edit');
+    Review.findById(req.params.id, function(err, review){
+        res.render('reviews/edit', {
+        review,
+    });
+        
+    });
 }
 
+
 function update(req, res) {
+    // console.log(req.body);
     // set the done property
-    req.body.done = false;
+    // req.body.done = false;
     // ask the data file to replace the existing todo object with the updated one
-    // Review.updateOne(req.params.id, req.body);
+    Review.findByIdAndUpdate(req.params.id, req.body, {new:true},
+       function (){res.redirect(`/reviews/${req.params.id}`)});
     // respond with res.redirect
-    res.redirect(`/reviews/${req.params.id}`);
+    // res.redirect(`/reviews/${req.params.id}`);
 }
 
 

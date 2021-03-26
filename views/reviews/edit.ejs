@@ -10,8 +10,12 @@
 <body>
     <h1>This is the Edit Page</h1>
     <a href="/">Home Page</a>
-    <input type="text" name="text" value="">
+    <h2>Edit Review: <%= review.title %></h2>
+
+    <form action="/reviews/<%= review._id %>?_method=Put" method="post">
+        <input type="text" name="title" value="<%= review.title %>">
         <button type="submit">Edit Review</button>
     </form>
+
 </body>
 </html>
