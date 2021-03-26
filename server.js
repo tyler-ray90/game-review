@@ -15,6 +15,7 @@ app.set("view engine", "ejs")
 // Mount middleware
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
+app.use(express.static('public'));
 
 // Mount routes
 app.use('/', indexRouter);

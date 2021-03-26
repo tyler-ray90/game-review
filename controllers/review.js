@@ -39,10 +39,6 @@ function deleteReview(req, res) {
     })
 }
 
-// function edit(req, res) {
-//     // const review = Review.getOne(req.params.id);
-//     res.render('reviews/edit', {review, reviewId: req.params.id,});
-// }
 
 
 function edit(req, res) {
