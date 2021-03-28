@@ -4,20 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css" />
     <title>This is the Show Page</title>
 </head>
 <body>
-    <h1>This is the show page</h1>
-    <div>
-        <%= review.title %>
-        <%= review.developer %>
-        <%= review.genre %>
-        <%= review.releaseYear %>
-        <%= review.rating %>
-        <%= review.review %>
-    </div>
-
-    <a href="/reviews/<%= review._id  %>/edit">Edit This review</a>
+    <header>
+    <h1>MetaReviews</h1>
+    <a href="/" class="home"><u>Home Page</u></a>
+    </header>
+    <main>
+    <fieldset>
+        <p>Game Title: <%= review.title %></p>
+        <br>
+        <p>Developer: <%= review.developer %></p>
+        <br>
+        <p>Genre: <%= review.genre %></p>
+        <br>
+        <p>Release Year: <%= review.releaseYear %></p>
+        <br>
+        <p>Rating: <%= review.rating %></p>
+        <br>
+        <p>Review: <%= review.review %></p>
+    </fieldset>
+    <a href="/reviews/<%= review._id  %>/edit" class="edit">Edit This Review</a>
+    </main>
+    <footer>
+        <p><strong>Copyright &copy; All Rights Reserved 2021 MetaReviews</strong></p>
+    </footer>
+</body>
 
 </html>

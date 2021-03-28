@@ -4,20 +4,27 @@
 }
 
 header {
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px groove green;
+    
 }
 
 h1 {
     font-family: 'Anton', sans-serif;
     color: yellow;
     font-size: 45px;
-    border-bottom: 2px groove white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 body {
-    background-color: rgb(36,38,39);
-    display: flex;
-    flex-direction: column;
+    background: url('/img/wp3660106.jpg');
+    min-height: 100vh;
     background-size: cover;
 }
 
@@ -38,30 +45,22 @@ h2 {
 a {
     color: white;
     font-size: 25px;
-    color: white;ß
-}
-
-
-.review-page {
-    position: fixed;
-    right: 0;
-    top: 0;
+    color: white;
 }
 
 
 footer {
-    color: white;
+    color: black;
     font-size: 20px;
     width: 100%;
     text-align: center;
     border-top: 2px groove white;
-    position: absolute;
-    bottom: 0;
     
+    /* position: fixed;
+    bottom: 0; */
 }
 
 .page-container {
-    position: relative;
     min-height: 100vh;
 }
 
@@ -71,12 +70,69 @@ fieldset {
     padding: 20px;
     margin: 20px 0;
     background-color: wheat;
+    max-width: fit-content;
+    max-height: fit-content;
+    
   }
 
   label {
     color: black;
     font-family: 'Oswald';
     font-weight: 200;
-    display: block;
+    /* display: inline; */
     font-size: 20px;
-  }
+}
+
+textarea {
+    width: 500px;
+    height: 100px;
+    max-width: 500px;
+    max-height: 100px;
+}
+
+th {
+    color: black;
+    font-family: 'Oswald';
+    font-size: 25px;
+    padding: 10px;
+
+}
+
+.title {
+    color: rgb(0, 63, 180);
+    padding: 0 10px 0 0;
+}
+
+form {
+    display: grid;
+}
+
+p {
+    font-size: 30px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.border {
+    border: 2px solid black;
+}
+
+td {
+    border-bottom: 1px solid black;;
+}
+
+.edit {
+    color: yellow;
+    
+}
+
+a {
+    font-size: 30px;
+}
+
+
+
+.edit-title {
+    font-size: 30px;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+}

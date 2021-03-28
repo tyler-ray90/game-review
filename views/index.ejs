@@ -22,12 +22,16 @@
     <form id="new-form" action="/reviews" method="POST">
         <label>Game Title:</label>
         <input type="text" name="title">
+        <br>
         <label>Developer:</label>
         <input type="text" name="developer">
+        <br>
         <label>Release Year:</label>
         <input type="text" name="releaseYear">
+        <br>
         <label>Genre:</label>
         <input type="text" name="genre">
+        <br>
         <label>Rating:</label>
         <select name="rating">
           <option value="1">1</option>
@@ -51,7 +55,9 @@
           <option value="10">10</option>
         </select>
         <label>Written Review:</label>
-        <input type="text" name="review">
+        <!-- <input type="text" name="review"> -->
+        <textarea type="text" name="review"></textarea>
+        <br>
         <input type="submit" value="Add Review" class="btn btn-primary">
       </form>
       </fieldset>

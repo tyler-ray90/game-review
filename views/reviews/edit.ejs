@@ -4,18 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Edit a Review</title>
+    <title>MetaReview</title>
 </head>
 <body>
-    <h1>This is the Edit Page</h1>
-    <a href="/">Home Page</a>
-    <h2>Edit Review: <%= review.title %></h2>
-
+    <header>
+    <h1>MetaReviews</h1>
+    <a href="/" class="home">Home Page</a>
+    </header>
+    <h2 class="edit-title">Edit Review: <%= review.title %></h2>
+    <main>
+    <fieldset>
     <form action="/reviews/<%= review._id %>?_method=Put" method="post">
         <input type="text" name="title" value="<%= review.title %>">
-        <button type="submit">Edit Review</button>
+        <button type="submit" class="btn btn-info">Edit</button>
+        <br>
+        <input type="text" name="developer" value="<%= review.developer %>">
+        <button type="submit" class="btn btn-info">Edit</button>
+        <br>
+        <input type="text" name="releaseYear" value="<%= review.releaseYear %>">
+        <button type="submit" class="btn btn-info">Edit</button>
+        <br>
+        <input type="text" name="genre" value="<%= review.genre %>">
+        <button type="submit" class="btn btn-info">Edit</button>
+        <br>
+        <input type="text" name="rating" value="<%= review.rating%>">
+        <button type="submit" class="btn btn-info">Edit</button>
+        <br>
+        <textarea type="text" name="review" value="<%= review.review %>" id="edit"></textarea>
+        <button type="submit" class="btn btn-info">Edit</button>
     </form>
-
+    </fieldset>
+    </main>
+    <footer>
+        <p><strong>Copyright &copy; All Rights Reserved 2021 MetaReviews</strong></p>
+    </footer>
 </body>
 </html>

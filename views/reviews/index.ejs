@@ -4,44 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css" />
     <title>Document</title>
 </head>
 <body>
-    <h1>This is the reviews index page</h1>
-    <a href="/">Home Page</a>
-    <a href="/reviews/new">Add Review Here</a>  
-    
-    <table id="list">
+  <header>
+    <h1>MetaReviews</h1>
+    <a href="/" class="home"><u>Home Page</u></a>
+    </header>
+    <!-- <a href="/reviews/new">Add Review Here</a>   -->
+    <main>
+    <fieldset>
+    <table>
         <thead>
           <tr>
             <th>Title</th>
             <th>Developer</th>
-            <th>Release<br>Year</th>
+            <th>Release</th>
             <th>Genre</th>
             <th>Rating</th>
-            <th>Review</th>
+            <!-- <th>Review</th> -->
           </tr>
         </thead>
-        <tbody>
+        <tbody class="border">
           <% reviews.forEach(function(r, idx) { %>
-            <tr>
-              <td><a href="/reviews/<%= r._id %>"><%= r.title %></a></td>
+            <tr class="border">
+              <td><a href="/reviews/<%= r._id %>" class="title"><%= r.title %></a></td>
               <td><%= r.developer %></td>
               <td><%= r.releaseYear %></td>
               <td><%= r.genre %></td>
               <td><%= r.rating %></td>
-              <td><%= r.review %></td>
+              <!-- <td><%= r.review %></td> -->
               <td>
                 <form action="/reviews/<%= r._id %>?_method=DELETE"
                     class="delete-form" method="POST">
-                    <button type="submit">Delete</button>
+                    <button type="submit" class="btn btn-danger">Delete</button>
                 </form>
             </td>
-            </tr>
+          </tr>
             <% }); %>
           </tbody>
         </table>
-    
+        </fieldset>
+        </main>
+        
+        <footer>
+          <p><strong>Copyright &copy; All Rights Reserved 2021 MetaReviews</strong></p>
+      </footer>
+
 </body>
 </html>
