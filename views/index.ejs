@@ -4,13 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/stylesheets/style.css" />
-    <title>Video Game Review</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>MetaReviews</title>
 </head>
 <body>
-    <h1 class="bk">B.K. Randy Reviews</h1>
-    <h2>Saluations. Welcome to B.K.Randy Reviews. </h2>
-    <a href="/reviews/new">Add Review Here</a>
-    <a href="/reviews">Reviews Page</a>
+    <header>
+        <h1>MetaReviews</h1>
+        <a href="/reviews" class="review-page"><u>Reviews</u></a>
+        <!-- <a href="/reviews/new">Add Review</a> -->
+    </header>
+    <main class="page-container">
+    <h2>Saluatations. Welcome to MetaReviews. Feel free to leave a video game review of your choosing for our community to read. Or just browse the review library we have of other gamers. Game on!</h2>
+    <fieldset>
+    <form id="new-form" action="/reviews" method="POST">
+        <label>Game Title:</label>
+        <input type="text" name="title">
+        <label>Developer:</label>
+        <input type="text" name="developer">
+        <label>Release Year:</label>
+        <input type="text" name="releaseYear">
+        <label>Genre:</label>
+        <input type="text" name="genre">
+        <label>Rating:</label>
+        <select name="rating">
+          <option value="1">1</option>
+          <option value="1.5">1.5</option>
+          <option value="2">2.0</option>
+          <option value="2.5">2.5</option>
+          <option value="3">3</option>
+          <option value="3.5">3.5</option>
+          <option value="4">4</option>
+          <option value="4.5">4.5</option>
+          <option value="5">5</option>
+          <option value="5.5">5.5</option>
+          <option value="6">6</option>
+          <option value="6.5">6.5</option>
+          <option value="7">7</option>
+          <option value="7.5">7.5</option>
+          <option value="8">8</option>
+          <option value="8.5">8.5</option>
+          <option value="9">9</option>
+          <option value="9.5">9.5</option>
+          <option value="10">10</option>
+        </select>
+        <label>Written Review:</label>
+        <input type="text" name="review">
+        <input type="submit" value="Add Review" class="btn btn-primary">
+      </form>
+      </fieldset>
+    </main>
+    
+    <footer>
+        <p><strong>Copyright &copy; All Rights Reserved 2021 MetaReviews</strong></p>
+    </footer>
 </body>
 </html>

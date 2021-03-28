@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+header {
+    position: relative;
+}
+
+h1 {
+    font-family: 'Anton', sans-serif;
+    color: yellow;
+    font-size: 45px;
+    border-bottom: 2px groove white;
+}
+
+body {
+    background-color: rgb(36,38,39);
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+}
+
+h2 {
+    font-size: 30px;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+}
+
+.link {
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+
+a {
+    color: white;
+    font-size: 25px;
+    color: white;ß
+}
+
+
+.review-page {
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+
+footer {
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    border-top: 2px groove white;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: wheat;
+  }
+
+  label {
+    color: black;
+    font-family: 'Oswald';
+    font-weight: 200;
+    display: block;
+    font-size: 20px;
+  }
