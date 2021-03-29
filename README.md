@@ -33,7 +33,7 @@ Screen Shot 2021-03-28 at 10.55.56 PM![image](https://user-images.githubusercont
 
 # Future Updates
 
-*User Log in
-*Forum style chatting
-*Like Features
+* User Log in
+* Forum style chatting
+* Like Features
 
