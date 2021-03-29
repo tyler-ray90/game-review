@@ -22,6 +22,7 @@ h1 {
     font-family: 'Anton', sans-serif;
     color: yellow;
     font-size: 45px;
+    padding: 5px 0 0 10px;
 }
 
 main {
@@ -80,10 +81,11 @@ fieldset {
     border-radius: 5px;
     padding: 20px;
     margin: 20px 0;
-    background-color: wheat;
+    background-color: rgb(116, 132, 146);
     max-width: fit-content;
     max-height: fit-content;
-    
+    /* background: url(/img/242333.jpg); */
+    /* background-size: cover; */
   }
 
   label {
@@ -147,4 +149,9 @@ a {
     font-size: 30px;
     color: white;
     font-family: 'PT Sans', sans-serif;
+}
+
+label {
+    font-size: 25px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }

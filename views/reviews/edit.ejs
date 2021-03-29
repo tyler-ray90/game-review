@@ -20,21 +20,27 @@
     <main>
     <fieldset>
     <form action="/reviews/<%= review._id %>?_method=Put" method="post">
+        <h4>Game Title:</h4>
         <input type="text" name="title" value="<%= review.title %>">
         <button type="submit" class="btn btn-info">Edit</button>
         <br>
+        <h4>Developer:</h4>
         <input type="text" name="developer" value="<%= review.developer %>">
         <button type="submit" class="btn btn-info">Edit</button>
         <br>
+        <h4>Release Year:</h4>
         <input type="text" name="releaseYear" value="<%= review.releaseYear %>">
         <button type="submit" class="btn btn-info">Edit</button>
         <br>
+        <h4>Genre:</h4>
         <input type="text" name="genre" value="<%= review.genre %>">
         <button type="submit" class="btn btn-info">Edit</button>
         <br>
+        <h4>Rating:</h4>
         <input type="text" name="rating" value="<%= review.rating%>">
         <button type="submit" class="btn btn-info">Edit</button>
         <br>
+        <h4>Review:</h4>
         <textarea type="text" name="review" value="<%= review.review %>" id="edit"></textarea>
         <button type="submit" class="btn btn-info">Edit</button>
     </form>

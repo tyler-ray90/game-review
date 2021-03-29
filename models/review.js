@@ -20,7 +20,10 @@ const reviewSchema = new Schema(
         }, 
         review: {
             type: String,
-        }
+        },
+        author: {
+            type: String,
+        },
 
 
 });
