@@ -4,12 +4,12 @@
 
 # Technologies Used
 
-*Nodes
-*MongoDB
-*Mongoose
-*Javascript
-*Html
-*CSS
+* Nodes
+* MongoDB
+* Mongoose
+* Javascript
+* Html
+* CSS
 
 
 # Screenshots
