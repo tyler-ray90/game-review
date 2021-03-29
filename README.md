@@ -1,6 +1,6 @@
 # MetaReviews
 
-## MetaReviews allows users to post reviews of their favorite games. Users are able to view, edit, and update any of their personal reviews.  The reviews are stored in a database in which anyone can read other users reviews.  
+## MetaReviews allows users to post reviews of their favorite games. Users are able to view, edit, and update any of their personal publications.  The reviews are stored in a database in which anyone can read other users reviews.  
 
 # Technologies Used
 
